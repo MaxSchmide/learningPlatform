@@ -3,12 +3,15 @@
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
+	"homepage": "https://maxschmide.github.io/learningplatform",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"sb": "start-storybook -p 6006",
-		"build-storybook": "build-storybook"
+		"build-storybook": "build-storybook",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -d build"
 	},
 	"dependencies": {
 		"gh-pages": "^5.0.0",
