@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: "Lato", system-ui, sans-serif;
+	}
+	.container {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 1025px) {
+		html {
+			font-size: 62.5%;
+		}
+	}
+}
+
+@layer components {
+	.label {
+		@apply inline-block px-3 py-1 text-blue bg-blue bg-opacity-10 rounded;
+	}
+	.menu__item {
+		@apply px-4 flex  items-center text-body2-bold cursor-pointer hover:text-yellow ease-in-out duration-200 hover:border-b-2 hover:border-yellow;
+	}
+	.hero__icon {
+		@apply p-4 rounded-xl bg-white bg-opacity-10 text-white inline-block;
+	}
+	.hero__item {
+		@apply rounded-xl bg-black flex gap-4 absolute p-4;
+	}
+	.semihero__icon {
+		@apply p-3 inline-block rounded-full bg-blue text-blue bg-opacity-10 mb-6;
+	}
+	.arrows--blue {
+		@apply md:rotate-90 ease-in duration-200 hover:bg-blue hover:text-white rounded-full  border border-blue text-blue text-4xl inline-block cursor-pointer;
+	}
+	.arrows--grey {
+		@apply ease-in duration-200 hover:bg-white hover:text-grey rounded-full  border border-grey text-white text-4xl inline-block cursor-pointer;
+	}
+	.features__card {
+		@apply hover:bg-white hover:shadow-3xl ease-in-out duration-200 p-6 border border-black border-opacity-10 rounded flex gap-4 cursor-default;
+	}
+	.features__icon {
+		@apply group-hover:bg-blue group-hover:text-white ease-in-out duration-200 text-blue text-4xl p-2 rounded-full bg-blue bg-opacity-10;
+	}
+	.footer__item {
+		@apply cursor-pointer text-white hover:text-yellow ease-in-out duration-200;
+	}
+	.topics__card {
+		@apply border border-black border-opacity-10 text-blue text-body2-bold py-5 text-center rounded hover:shadow-3xl hover:border-none select-none;
+	}
+}
+.scrollbar-none::-webkit-scrollbar {
+	display: none;
+}
+.background {
+	background: linear-gradient(143.07deg, #302f32 5.14%, #242424 78.54%);
+}
+.background-half {
+	background: linear-gradient(to bottom, white 50%, transparent 50%),
+		linear-gradient(66.07deg, #302f32 5.14%, #242424 78.54%);
+}
+.mask {
+	mask: linear-gradient(90deg, #0000, #000 20% 80%, #0000);
+}
+.mask-0 {
+	mask: linear-gradient(90deg, #0000, #000 0% 80%, #0000);
+}
+.mask-100 {
+	mask: linear-gradient(90deg, #0000, #000 20% 100%, #0000);
+}
